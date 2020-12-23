@@ -92,6 +92,7 @@ const Home = () => {
     localStorage.setItem("chosen-author", JSON.stringify(authy));
   });
 */
+
   return (
     <div className="home">
       <br></br>
