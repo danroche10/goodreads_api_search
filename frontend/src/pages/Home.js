@@ -6,12 +6,10 @@ import BooksResult from "../components/BooksResult";
 import { useForm } from "react-hook-form";
 import { AuthyContext } from "../contexts/AuthyContext";
 import { SearchContext } from "../contexts/SearchContext";
-const { REACT_APP_API_KEY } = require("../config.js");
 
 var parseString = require("xml2js").parseString;
 
 const Home = () => {
-  const apiKey = process.env.REACT_APP_API_KEY;
   const [search, setSearch] = useContext(SearchContext);
 
   String.prototype.toProperCase = function () {
