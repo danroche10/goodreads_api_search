@@ -1,7 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, {
+  useEffect,
+  useState,
+  useContext,
+  Suspense,
+  Spinner,
+} from "react";
 import axios from "axios";
 import "../App.css";
-import BookResult from "../components/BooksResult";
+import BooksResult from "../components/BooksResult";
 //import { Grid } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 import { AuthyContext } from "../contexts/AuthyContext";
@@ -31,7 +37,7 @@ const Home = () => {
 
     const fetchData = async () => {
       const result = await axios(
-        `https://www.goodreads.com/search/index.xml?key=${apiKey}&q=${author}`
+        `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/search/index.xml?key=${apiKey}&q=${author}`
       );
 
       let books = "";
@@ -58,7 +64,6 @@ const Home = () => {
         setError("error");
       }
     };
-
     fetchData();
   }, [search]);
 
@@ -82,10 +87,11 @@ const Home = () => {
   }, []);
 */
 
+  /*
   React.useEffect(() => {
     localStorage.setItem("chosen-author", JSON.stringify(authy));
   });
-
+*/
   return (
     <div className="home">
       <br></br>
@@ -110,7 +116,7 @@ const Home = () => {
           Sorry, we couldn't find what you were looking for. Search again!
         </div>
       ) : (
-        <BookResult authy={authy} key={authy} />
+        <BooksResult authy={authy} key={authy} />
       )}
       <br></br>
     </div>

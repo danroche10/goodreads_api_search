@@ -4,20 +4,21 @@ import "../App.css";
 import BookCard from "./BookCard";
 import { Image } from "semantic-ui-react";
 import { AuthyContext } from "../contexts/AuthyContext";
-//import { SearchContext } from "../contexts/SearchContext";
+import { SearchContext } from "../contexts/SearchContext";
 
 var parseString = require("xml2js").parseString;
 
 const BooksResult = () => {
-  //const [searchy, setSearchy] = useContext(SearchContext);
+  const [search, setSearch] = useContext(SearchContext);
 
   const [authy, setAuthy] = useContext(AuthyContext);
-  console.log(authy);
+
   useEffect(() => {
     let isMounted = true; // note this flag denote mount status
     let apiKey = "ALVzK8NwSNC6KG0i7LIMgg";
 
     let authorId = "";
+
     if (authy === undefined) {
       authorId = 1265;
     } else {
@@ -28,7 +29,7 @@ const BooksResult = () => {
       let result = "";
       if (isMounted) {
         result = await axios(
-          `https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
+          `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
         );
       }
       let data2 = [];
@@ -78,7 +79,7 @@ const BooksResult = () => {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [search]);
 
   const [authorImage, setAuthorImage] = useState("");
   const [data2, setData2] = useState([]);
