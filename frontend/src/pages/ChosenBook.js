@@ -6,13 +6,14 @@ import { AuthyContext } from "../contexts/AuthyContext";
 import { BookContext } from "../contexts/BookContext";
 import { Link } from "react-router-dom";
 
+const { REACT_APP_API_KEY } = require("../config.js");
 var parseString = require("xml2js").parseString;
 
 const ChosenBook = () => {
   const [book, setBook] = useContext(BookContext);
   const [authy, setAuthy] = useContext(AuthyContext);
   useEffect(() => {
-    let apiKey = "ALVzK8NwSNC6KG0i7LIMgg";
+    let apiKey = REACT_APP_API_KEY;
     let authorId = authy;
     const fetchData2 = async () => {
       const result = await axios(

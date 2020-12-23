@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 import { Image } from "semantic-ui-react";
 import { AuthyContext } from "../contexts/AuthyContext";
 import { SearchContext } from "../contexts/SearchContext";
+const { REACT_APP_API_KEY } = require("../config.js");
 
 var parseString = require("xml2js").parseString;
 
@@ -15,7 +16,7 @@ const BooksResult = () => {
 
   useEffect(() => {
     let isMounted = true; // note this flag denote mount status
-    let apiKey = "ALVzK8NwSNC6KG0i7LIMgg";
+    let apiKey = REACT_APP_API_KEY;
 
     let authorId = "";
 
