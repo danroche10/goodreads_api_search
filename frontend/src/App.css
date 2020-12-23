@@ -1,0 +1,168 @@
+input {
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.authorDescription {
+  font-size: 12px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.MuiAutocomplete-listbox {
+  height: 150px;
+}
+
+.page-title {
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0.7rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin: 0px;
+  width: 90%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.essayPageDescription {
+  font-size: 1rem;
+  margin: auto;
+  width: 50%;
+}
+
+.form-container {
+  width: 400px;
+  margin: auto;
+}
+
+.submit-button {
+  margin-top: 1rem !important;
+}
+.header {
+  text-transform: capitalize;
+}
+
+::placeholder {
+  font-size: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.MuiAutocomplete-listbox {
+  height: 150px;
+}
+
+.author_image {
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.search {
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.cardImage {
+  opacity: 0.7;
+  margin-bottom: 2%;
+  margin: 0;
+  height: 4em;
+  width: 4em;
+}
+
+.author_card_description {
+  width: 80%;
+}
+
+.container-1 {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container-2 {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.bookImage {
+  opacity: 0.7;
+  margin: 0;
+  height: 8em;
+  width: 5em;
+}
+
+.home {
+  width: 60%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bookTitle {
+  font-size: 0.8em;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.boldy {
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+.boldy2 {
+  font-size: 0.8em;
+  margin-bottom: 2%;
+}
+
+.authorDescription {
+  font-size: 0.8em;
+}
+
+.bookCard {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 20px;
+  height: 19em;
+  width: 13em;
+  display: inline-block;
+  position: relative;
+}
+
+.title {
+  font-style: Georgia;
+}
+
+.button {
+  position: absolute;
+  right: 40%;
+
+  bottom: 5%;
+}
+
+.sorry {
+  margin-top: 2%;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}

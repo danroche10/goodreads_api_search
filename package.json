@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node -r esm server.js",
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently -n 'server,frontend' -c 'red,green'  \"node -r esm server.js\" \"npm run frontend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
