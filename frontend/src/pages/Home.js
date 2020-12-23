@@ -29,7 +29,7 @@ const Home = () => {
 
   useEffect(() => {
     const abortController = new AbortController();
-    let apiKey = REACT_APP_API_KEY;
+    let apiKey = "ALVzK8NwSNC6KG0i7LIMgg";
 
     const fetchData = async () => {
       const result = await axios(
