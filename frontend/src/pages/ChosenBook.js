@@ -16,7 +16,7 @@ const ChosenBook = () => {
     let authorId = authy;
     const fetchData2 = async () => {
       const result = await axios(
-        `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
+        ` https://vast-crag-56368.herokuapp.com/https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
       );
       let data2 = [];
       let books2 = "";
