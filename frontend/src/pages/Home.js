@@ -31,7 +31,7 @@ const Home = () => {
 
     const fetchData = async () => {
       const result = await axios(
-        ` https://vast-crag-56368.herokuapp.com/https://www.goodreads.com/search/index.xml?key=${apiKey}&q=${author}`
+        `https://vast-crag-56368.herokuapp.com/https://www.goodreads.com/search/index.xml?key=${apiKey}&q=${author}`
       );
 
       let books = "";
