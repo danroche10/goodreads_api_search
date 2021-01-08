@@ -29,7 +29,7 @@ const BooksResult = () => {
       let result = "";
       if (isMounted) {
         result = await axios(
-          `https://vast-crag-56368.herokuapp.com/https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
+          `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/author/show/${authorId}?format=xml&key=${apiKey}`
         );
       }
       let data2 = [];
